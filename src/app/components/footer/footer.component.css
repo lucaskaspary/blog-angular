@@ -1,0 +1,12 @@
+.container__footer > span {
+  border-top: 1px solid grey;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #111111;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

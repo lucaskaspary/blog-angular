@@ -1,25 +1,15 @@
-<header>
-  <app-menu-bar></app-menu-bar>
-</header>
 <app-menu-title></app-menu-title>
 <div class="container__articles">
   <div class="articles__main">
-    <app-big-card
-      photoCover="http://clinicadrandreamado.com.br/wordpress/wp-content/uploads/2017/10/no-image.jpg"
-      cardTitle="Nova notícia"
-      cardDescription="Descrição da notícia"
-    >
-    </app-big-card>
+    <div class="articles__main-cards"*ngFor="let card of cards;">
+      <app-big-card *ngIf="(card.isHighlight == 'true')" id="{{card.id}}"></app-big-card>
+    </div>
+
   </div>
   <div class="articles__others">
-    <app-small-card
-      photoCover="http://clinicadrandreamado.com.br/wordpress/wp-content/uploads/2017/10/no-image.jpg"
-      cardTitle="Nova notícia"></app-small-card>
-    <app-small-card
-      photoCover="http://clinicadrandreamado.com.br/wordpress/wp-content/uploads/2017/10/no-image.jpg"
-      cardTitle="Nova notícia"></app-small-card>
-    <app-small-card
-      photoCover="http://clinicadrandreamado.com.br/wordpress/wp-content/uploads/2017/10/no-image.jpg"
-      cardTitle="Nova notícia"></app-small-card>
+    <div class="articles__others-cards" *ngFor="let card of cards;">
+      <app-small-card *ngIf="(card.isHighlight == 'false')" id="{{card.id}}"></app-small-card>
+    </div>
+
   </div>
 </div>
